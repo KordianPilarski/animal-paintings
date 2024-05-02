@@ -1,3 +1,42 @@
-<div *ngFor="let product of products">
-  {{ product.name }}
+<!-- <mat-grid-list cols="4">
+  <mat-grid-tile *ngFor="let product of products">
+    <mat-card class="product-card">
+      <img
+        mat-card-image
+        src="assets/images/{{ product.image_url }}"
+        alt="Photo of a {{ product.name }}"
+      />
+      <mat-card-content>
+        <mat-card-title> {{ product.name }}<mat-card-title>
+        <mat-card-subtitle>
+          {{ product.price | currency : "PLN" }}
+        </mat-card-subtitle>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list> -->
+<div class="container">
+  <h2>Our latest collection</h2>
+
+  <div
+    fxLayout="row wrap"
+    fxLayoutGap="50px grid"
+    fxLayoutAlign="center center"
+  >
+    <div *ngFor="let product of products">
+      <mat-card class="product-card">
+        <img
+          mat-card-image
+          src="assets/images/{{ product.image_url }}"
+          alt="Photo of a {{ product.name }}"
+        />
+        <mat-card-content>
+          <mat-card-title>{{ product.name }}</mat-card-title>
+          <mat-card-subtitle>
+            {{ product.price | currency : "PLN" }}
+          </mat-card-subtitle>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
 </div>

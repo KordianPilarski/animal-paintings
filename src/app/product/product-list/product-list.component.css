@@ -1,0 +1,12 @@
+.product-card {
+  max-width: 150px;
+}
+
+mat-card:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+mat-card {
+  transition: transform 0.2s;
+}
